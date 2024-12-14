@@ -1,5 +1,3 @@
-'use client'
-
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -13,12 +11,12 @@ export default function Contact() {
     message: ''
   })
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData(prevState => ({ ...prevState, [name]: value }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     // Here you would typically send the form data to a server
     console.log('Form submitted:', formData)
@@ -87,4 +85,3 @@ export default function Contact() {
     </div>
   )
 }
-
