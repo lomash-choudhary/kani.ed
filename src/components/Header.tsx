@@ -22,18 +22,6 @@ export function Header() {
     return () => window.removeEventListener('resize', handleResize);
   }, [isMenuOpen]);
 
-  // Prevent scrolling when menu is open
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isMenuOpen]);
-
   const menuItems = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
