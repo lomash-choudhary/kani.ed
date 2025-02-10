@@ -6,7 +6,7 @@ import { Footer } from '../components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Kaneika - Your guide to healthy, glowing skin',
+  title: "Testing",
   description: 'Personal brand portfolio of Kaneika, a skincare enthusiast and freelancer.',
 }
 
